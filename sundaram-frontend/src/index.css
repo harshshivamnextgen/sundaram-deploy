@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+  --color-brand-red: #8c2635;
+  --color-brand-gold: #b8922a;
+  --color-brand-cream: #fffef0;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-montserrat);
+    background-color: var(--color-brand-cream);
+    margin: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100%;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
