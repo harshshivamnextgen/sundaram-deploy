@@ -22,8 +22,18 @@
   status = 200
 
 [[redirects]]
+  from = "/auth"
+  to = "/.netlify/functions/server/auth"
+  status = 200
+
+[[redirects]]
   from = "/auth/*"
   to = "/.netlify/functions/server/auth/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/products"
+  to = "/.netlify/functions/server/products"
   status = 200
 
 [[redirects]]
@@ -32,8 +42,18 @@
   status = 200
 
 [[redirects]]
+  from = "/categories"
+  to = "/.netlify/functions/server/categories"
+  status = 200
+
+[[redirects]]
   from = "/categories/*"
   to = "/.netlify/functions/server/categories/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/offers"
+  to = "/.netlify/functions/server/offers"
   status = 200
 
 [[redirects]]
@@ -42,8 +62,18 @@
   status = 200
 
 [[redirects]]
+  from = "/banners"
+  to = "/.netlify/functions/server/banners"
+  status = 200
+
+[[redirects]]
   from = "/banners/*"
   to = "/.netlify/functions/server/banners/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/blogs"
+  to = "/.netlify/functions/server/blogs"
   status = 200
 
 [[redirects]]
@@ -52,8 +82,18 @@
   status = 200
 
 [[redirects]]
+  from = "/reviews"
+  to = "/.netlify/functions/server/reviews"
+  status = 200
+
+[[redirects]]
   from = "/reviews/*"
   to = "/.netlify/functions/server/reviews/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/inquiries"
+  to = "/.netlify/functions/server/inquiries"
   status = 200
 
 [[redirects]]
@@ -62,8 +102,18 @@
   status = 200
 
 [[redirects]]
+  from = "/orders"
+  to = "/.netlify/functions/server/orders"
+  status = 200
+
+[[redirects]]
   from = "/orders/*"
   to = "/.netlify/functions/server/orders/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/site-settings"
+  to = "/.netlify/functions/server/site-settings"
   status = 200
 
 [[redirects]]
@@ -72,13 +122,28 @@
   status = 200
 
 [[redirects]]
+  from = "/content-pages"
+  to = "/.netlify/functions/server/content-pages"
+  status = 200
+
+[[redirects]]
   from = "/content-pages/*"
   to = "/.netlify/functions/server/content-pages/:splat"
   status = 200
 
 [[redirects]]
+  from = "/catering-menus"
+  to = "/.netlify/functions/server/catering-menus"
+  status = 200
+
+[[redirects]]
   from = "/catering-menus/*"
   to = "/.netlify/functions/server/catering-menus/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/delivery-platforms"
+  to = "/.netlify/functions/server/delivery-platforms"
   status = 200
 
 [[redirects]]
