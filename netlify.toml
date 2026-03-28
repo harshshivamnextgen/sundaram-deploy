@@ -2,9 +2,9 @@
   # Build the frontend from the sibling directory and copy it to our static folder
   # This command runs in the sundaram-backend directory
 [build]
-  command = "cd ../sundaram-new/my-app && npm install && npm run build && cd ../../sundaram-backend && mkdir -p public && cp -R ../sundaram-new/my-app/dist/. public/ && mkdir -p uploads && cp -R uploads/. public/"
-  publish = "public"
-  functions = "netlify/functions"
+  command = "cd sundaram-new/my-app && npm install && npm run build && cd ../../sundaram-backend && mkdir -p public && cp -R ../sundaram-new/my-app/dist/* public/ && cp -R uploads public/"
+  publish = "sundaram-backend/public"
+  functions = "sundaram-backend/netlify/functions"
 
 [functions]
   external_node_modules = ["serverless-http", "express", "mongoose", "cors", "helmet", "morgan", "dotenv", "@sentry/node", "bcrypt", "dayjs", "jsonwebtoken", "multer", "nodemailer", "zod"]
