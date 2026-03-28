@@ -14,11 +14,22 @@
   to = "/.netlify/functions/server/uploads/:splat"
   status = 200
 
-# Proxy for API routes
+# Proxy all API and Auth routes to the Netlify Function
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/server/:splat"
   status = 200
+
+[[redirects]]
+  from = "/admin/notifications"
+  to = "/.netlify/functions/server/admin/notifications"
+  status = 200
+
+[[redirects]]
+  from = "/admin/notifications/*"
+  to = "/.netlify/functions/server/admin/notifications/:splat"
+  status = 200
+
 
 [[redirects]]
   from = "/admin/notifications"
