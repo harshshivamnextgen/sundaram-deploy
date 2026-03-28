@@ -87,10 +87,30 @@ app.get('/api/health', (req, res) => {
 
 // Catch-all route to serve the frontend index.html for React SPA routing
 app.get('*', (req, res, next) => {
-  // If it's an API route that wasn't caught, pass to 404
-  if (req.path.startsWith('/api/') || req.path.startsWith('/auth/')) {
+  // List of paths that should NOT be redirected to index.html (API and Auth routes)
+  const apiPaths = [
+    '/auth',
+    '/banners',
+    '/categories',
+    '/products',
+    '/offers',
+    '/blogs',
+    '/reviews',
+    '/inquiries',
+    '/admin/notifications',
+    '/site-settings',
+    '/orders',
+    '/api',
+    '/content-pages',
+    '/catering-menus',
+    '/delivery-platforms'
+  ];
+
+  // If it's an API route that wasn't caught, pass to 404 handler
+  if (apiPaths.some(p => req.path.startsWith(p))) {
     return next();
   }
+
   res.sendFile(path.join(publicDir, 'index.html'));
 });
 
