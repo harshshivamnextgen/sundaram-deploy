@@ -4,7 +4,7 @@ const API_BASE = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '' : 'h
 
 // Create an instance for cleaner reusable config
 const api = axios.create({
-    baseURL: API_BASE,
+     baseURL: API_BASE ? `${API_BASE}/api` : '/api',
 });
 
 export async function fetchProducts(params: Record<string, string | number> = {}) {
