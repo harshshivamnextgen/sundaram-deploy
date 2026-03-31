@@ -22,6 +22,10 @@ Thumbs.db
 /dist
 /build
 
+.env
+.env*.local
+
+
 # Coverage directory
 coverage/
 
